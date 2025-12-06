@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script lists files in current directory, showing only part after first dash
+
+for file in *
+do
+    # Skip hidden files (starting with .) and the script itself
+    if [[ "$file" == .* ]] || [[ "$file" == "8-for_ls" ]]; then
+        continue
+    fi
+    
+    # Remove everything before and including the first dash
+    # Using parameter expansion to remove shortest prefix ending with "-"
+    echo "${file#*-}"
+done
