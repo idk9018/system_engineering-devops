@@ -1,2 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script displays all running processes in a hierarchical tree format
 ps -ef --forest
